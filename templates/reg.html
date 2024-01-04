@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShakeLang</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1629197237725-e51c9b3b438e?q=10'); 
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.5); 
+            max-width: 400px;
+        }
+
+
+
+        h1 {
+            color: #195594;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        .textbox {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" >
+        
+        <h1>Shakespeare LangSonnet</h1>
+        <p>Enter starting line here</p>
+        
+        <form id="myForm" method="POST">
+            {% csrf_token %}
+            <input type="text" class="textbox" placeholder="Sonnet Starts with..." id="myInput"  name="myInput">
+            <button type="submit" class="submit-btn">Create</button>
+        </form>
+        
+    </div>
+</body>
+</html>
